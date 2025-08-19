@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:backgroundTint="#8BD5D5D5"
+    android:background="#8C8C8C"
+   >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardCornerRadius="12dp"
+            card_view:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/title_courses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Courses"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="#1B1B1B"
+                    android:paddingBottom="8dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E0E0E0" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_courses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never"
+                    android:nestedScrollingEnabled="false"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="4dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardCornerRadius="12dp"
+            card_view:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/title_students"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Students"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="#1B1B1B"
+                    android:paddingBottom="8dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E0E0E0" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_students"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never"
+                    android:nestedScrollingEnabled="false"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="4dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="4dp">
+
+            <Button
+                android:id="@+id/btn_add_student"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Add Student"
+                android:textAllCaps="false"
+                android:backgroundTint="#2E7D32"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btn_add_course"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Add Course"
+                android:textAllCaps="false"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#2E7D32" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
